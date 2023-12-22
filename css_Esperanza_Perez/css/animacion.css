@@ -1,0 +1,154 @@
+@keyframes hayQueSaberSubirYBajar {
+0%{
+    bottom: 0;
+}
+    50%{
+        bottom: 100px;
+    }
+    100%
+    {
+        bottom: 0;
+    }
+}
+@keyframes nube {
+    0%{
+        right: -300px;
+    }
+    100%{
+        right: 1200px;
+    }
+}
+
+body, html {
+    cursor: url("../img/mazo.png"), auto;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    margin-right: 20px;
+}
+
+#juego {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    border: 3px solid black;
+    margin: auto;
+    overflow: hidden;
+}
+
+#cielo {
+    position: absolute;
+    z-index: 1;
+    width: 1000px;
+    height: 600px;
+    background: skyblue;;
+}
+
+#cesped {
+    position: absolute;
+    width: 1000px;
+    height: 200px;
+    background: forestgreen;
+    z-index: 3;
+    bottom: 0;
+}
+
+.topo {
+    position: absolute;
+    background-image: url("../img/topo.png");
+    height: 200px;
+    width: 200px;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    bottom: 0;
+    animation: hayQueSaberSubirYBajar 5s linear infinite;
+}
+.topo div{
+    background-image: url("../img/golpe2.png");
+    background-size: cover;
+    background-color: rgba(0,0,0,0);
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 20%;
+    z-index: 5;
+    visibility: hidden;
+}
+.topo:hover div {
+    visibility: visible;
+}
+
+#topo1 {
+    animation-delay: 1s;
+}
+
+#topo2 {
+    left: 200px;
+    animation-delay: 0s;
+}
+
+#topo3 {
+    left: 400px;
+    animation-delay: 1.5s;
+}
+
+#topo4 {
+    left: 600px;
+    animation-delay: 3s;
+}
+
+#topo5 {
+    left: 800px;
+    animation-delay: 5s;
+}
+#nube1{
+    z-index: 10;
+    height: 150px;
+    width: 250px;
+    position: absolute;
+    top: 25px;
+    right: -300px;
+    animation: nube 40s infinite linear;
+}
+#nube1 div{
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+}
+#nube1 div:nth-of-type(1){
+    right: 15px;
+    height: 100px;
+    width: 120px;
+}
+#nube1 div:nth-of-type(2){
+    top: 25px;
+    height: 75px;
+    width: 95px;
+}
+#nube1 div:nth-of-type(3){
+    bottom: 15px;
+    left: 50px;
+    height: 75px;
+    width: 75px;
+}
+#nube1 div:nth-of-type(4){
+    left: 25px;
+    height: 100px;
+    width: 120px;
+}
+#nube1 div:nth-of-type(5){
+    top: 45%;
+    left: 45%;
+    height: 75px;
+    width: 75px;
+}
+
+
+
+

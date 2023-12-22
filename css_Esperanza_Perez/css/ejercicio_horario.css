@@ -1,0 +1,65 @@
+/*Tabla horario*/
+
+table {
+    overflow-x: auto;
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table, th, td, #caption {
+    border-radius: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    color: var(--negro);
+    font-weight: bolder;
+    box-sizing: border-box;
+}
+
+td, th {
+    min-width: 12rem;
+    min-height: 3rem;
+    transition-duration: 0.5s;
+}
+
+td:hover, th:hover{
+    transform: scale(120%);
+}
+
+caption {
+    text-transform: uppercase;
+}
+
+.hores, #grup {
+    min-width: 6rem;
+    min-height: 3rem;
+}
+
+.dies, .hores, #grup {
+    background-color: #cdb4db;
+    font-family: var(--fuenteHeading);
+}
+
+#footer {
+    color: red;
+}
+
+.app {
+    background-color: #ffc8dd;
+}
+
+.cte {
+    background-color: #bde0fe;
+}
+
+.dis {
+    background-color: #fbf8cc;
+}
+
+.ser {
+    background-color: #98f5e1;
+}
+
+.emp {
+    background-color: #fec89a;
+}

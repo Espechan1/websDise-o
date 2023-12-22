@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Dance Academy</title>
+    <meta name="description" content="Hope Dance Academy">
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="index.html" as="document">
+
+    <!-- Preload -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+          crossorigin="anonymous" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+
+    <div class="contenedor">
+        <div class="barra">
+            <a class="logo" href="index.html">
+                <img src="./img/logo_300px.png" alt="logo_bailando">
+            </a>
+
+            <nav class="nav-ppal centrar-texto">
+                <ul class="centrar-texto"> <!-- listado horizontal -->
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="html/cursos.html">Cursos</a>
+                        <ul class="centrar-texto">                            <!-- despliegue en Cursos-->
+                            <li><a href="html/cursos.html#link_bachata">Bachata</a></li>
+                            <li><a href="html/cursos.html#link_salsa">Salsa</a></li>
+                            <li><a href="html/cursos.html#link_kizomba">Kizomba</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="html/contacto.html">Inscripción</a>
+                        <ul class="centrar-texto">                            <!-- despliegue en Inscripción -->
+                            <li><a href="html/contacto.html#inscripcion">Inscripción</a></li>
+                            <li><a href="html/contacto.html#mapa">Mapa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="html/Ejercicio_horario.html">Ejercicios</a>
+                        <ul class="centrar-texto">                            <!-- despliegue en Cursos-->
+                            <li><a href="html/Ejercicio_horario.html">Horario</a></li>
+                            <li><a href="html/Ejercicio_tabla.html">Tabla</a></li>
+                            <li><a href="html/animacion.html">Animación</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header__texto centrar-texto">
+        <h1 class="no-margin">Hope Dance Academy</h1>
+        <p id="frase" class="no-margin">Cuando bailo no puedo juzgar, no puedo odiar, no puedo separarme de la vida. Solo puedo ser
+            feliz y sentirme pletórico. (Hans Bos)</p>
+    </div>
+</header>
+
+<audio controls autoplay loop>
+    <source src="audio/Juan_Luis_Guerra_-_Burbujas_de_Amor(bachata).mp3" type="audio/mp3">
+</audio>
+
+<div class="contenedor contenido-principal">
+    <main class="blog">
+        <h2>Nuestro Blog</h2>
+
+        <article class="entrada">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/img_bachata_congreso.jpeg" type="image/jpeg"> <!--carga-->
+                    <img loading="lazy" src="./img/img_bachata_congreso.jpeg" alt="imagen blog">
+                </picture>
+            </div>
+
+            <div class="entrada__contenido">
+                <h3 class="no-margin">Bachata Dance Congreso</h3>
+                <p>El congreso más importante de España de baile latino, será en la Cartuja de Sevilla <strong>los días 29 y 30
+                    de noviembre y el día 1 de diciembre</strong>. En el congreso vendrán las parejas más representativas del
+                    panorama nacional y harán demostraciones y talleres para los que paguen el full pass. Una
+                    oportunidad única para aprender de la mano de tus bailarines favoritos. </p>
+            </div>
+        </article>
+
+        <article class="entrada">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/cartel.jpg" type="image/jpeg">
+                    <img loading="lazy" src="img/cartel.jpg" alt="concurso amateur">
+                </picture>
+            </div>
+
+            <div class="entrada__contenido">
+                <h3 class="no-margin">Festival de Salsa Cubana</h3>
+                <p>Aunque sabemos que hay muchos estilos de salsa, en la actualidad la salsa cubana está destacando
+                    fuerte debido a su simplicidad y característico modo de bailar. La salsa casino o salsa cubana
+                    estarán en esta cita que no te puedes perder. Comprad vuestras entradas, <b>plazas limitadas</b>.
+                    <em>Precios especiales para grupos de más de 15 personas.</em></p>
+            </div>
+        </article>
+
+        <article class="entrada">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/danza_oriental.jpg" type="image/jpeg">
+                    <img loading="lazy" src="img/danza_oriental.jpg" alt="danza oriental próximo curso">
+                </picture>
+            </div>
+
+            <div class="entrada__contenido">
+                <h3 class="no-margin">Segundo taller de danza oriental</h3>
+                <p><b>¡Notición!</b> Por fin vamos a hacer un segundo taller de danza oriental. Tras el éxito del
+                    primero y tras recibir innumerables peticiones, haremos una segunda edición para todos aquellos que
+                    desean probar los límites de su cuerpo. La danza oriental es muy saludable y compatible con otros
+                    estilos, así que no esperéis más. <strong>El día 27 de diciembre de 16:00 a 19:00h</strong> ¡OS
+                    ESPERAMOS!</p>
+            </div>
+        </article>
+    </main>
+    <aside class="sidebar">
+        <h2>Cursos y Talleres</h2>
+        <div id="scroll_index">
+        <ul class="cursos no-padding">
+            <li class="widget-curso">
+                <h4 class="no-margin">Clases de Bachata sensual</h4>
+                <p class="widget-curso__label">Precio:
+                    <span class="widget-curso__info">15 €/hora</span>
+                </p>
+                <p class="widget-curso__label">Cupo:
+                    <span class="widget-curso__info">20 parejas</span>
+                </p>
+                <a href="html/cursos.html#link_bachata" class="boton">Para más información</a>
+            </li>
+
+            <li class="widget-curso">
+                <h4 class="no-margin">Clases de salsa cubana</h4>
+                <p class="widget-curso__label">Precio:
+                    <span class="widget-curso__info">13 €/hora</span>
+                </p>
+                <p class="widget-curso__label">Cupo:
+                    <span class="widget-curso__info">20 parejas</span>
+                </p>
+                <a href="html/cursos.html#link_salsa" class="boton">Para más información</a>
+            </li>
+
+            <li class="widget-curso">
+                <h4 class="no-margin">Clases de Kizomba para parejas</h4>
+                <p class="widget-curso__label">Precio:
+                    <span class="widget-curso__info">15 €/hora</span>
+                </p>
+                <p class="widget-curso__label">Cupo:
+                    <span class="widget-curso__info">20 parejas</span>
+                </p>
+                <a href="html/cursos.html#link_kizomba" class="boton">Para más información</a>
+            </li>
+
+            <li class="widget-curso">
+                <h4 class="no-margin">Taller de danza oriental</h4>
+                <p class="widget-curso__label">Precio:
+                    <span class="widget-curso__info">20 €/hora</span>
+                </p>
+                <p class="widget-curso__label">Cupo:
+                    <span class="widget-curso__info">30 personas</span>
+                </p>
+                <a href="html/Ejercicio_horario.html" class="boton">Para más información</a>
+            </li>
+        </ul>
+        </div>
+    </aside>
+</div>
+
+<footer class="footer">
+    <div class="contenedor">
+        <div class="barra">
+            <a class="logo" href="index.html">
+                <img src="./img/logo_300px.png" alt="logo_bailando">
+            </a>
+
+            <nav class="nav-ppal centrar-texto">
+                <ul> <!-- listado horizontal -->
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="html/cursos.html">Cursos</a>
+                        <ul>                            <!-- despliegue en Cursos-->
+                            <li><a href="html/cursos.html#link_bachata">Bachata</a></li>
+                            <li><a href="html/cursos.html#link_salsa">Salsa</a></li>
+                            <li><a href="html/cursos.html#link_kizomba">Kizomba</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="html/contacto.html">Inscripción</a>
+                        <ul>                            <!-- despliegue en Inscripción -->
+                            <li><a href="html/contacto.html#inscripcion">Inscripción</a></li>
+                            <li><a href="html/contacto.html#mapa">Mapa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="html/Ejercicio_horario.html">Ejercicios</a>
+                        <ul>                            <!-- despliegue en Cursos-->
+                            <li><a href="html/Ejercicio_horario.html">Horario</a></li>
+                            <li><a href="html/Ejercicio_tabla.html">Tabla</a></li>
+                            <li><a href="html/animacion.html">Animación</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <p class="centrar-texto">Carrer Gremi Selleters i Basters, 23, Nord, 07009 Son Castelló, Illes Balears </p>
+    </div>
+</footer>
+</body>
+</html>

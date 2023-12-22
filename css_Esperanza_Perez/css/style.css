@@ -1,0 +1,360 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #DE3163;
+    --gris: grey;
+    --rosita: lightpink;
+    --negro: #000000;
+    --blanco: #fff;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    color: var(--negro); /* texto de la página*/
+}
+
+/** Globales **/
+
+.contenedor { /*barra+logo+nav*/
+    width: min(95%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    color: var(--primario);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    text-align: justify;
+}
+
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+/** Header **/
+.header__texto {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primario);
+    margin-top: 2rem;
+}
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 2rem;
+        background-color: var(--rosita);
+    }
+}
+
+.header {
+    background-image: url(../img/header.jpg);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.barra { /*logo+nav*/
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+#nav{
+    background-color: var(--rosita);
+}
+
+p#frase{
+    text-align: center !important;
+}
+
+.nav-ppal {
+    display: inline;
+    gap: 2rem;
+    font-size: 1.7rem;
+    }
+
+.nav-ppal ul { /*Si no pones display coge por def. el del selector*/
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Que no haga los puntos de la lista*/
+}
+.nav-ppal a {
+    display: block;
+    padding: 0.7rem 3rem;
+    text-decoration: none;
+    color: var(--primario);
+    width: 13rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+    .barra {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .nav-ppal a {
+        width:auto;
+    }
+}
+
+.nav-ppal a:hover {
+}
+
+.nav-ppal ul li{
+    background-color: var(--rosita);
+}
+
+.nav-ppal li:hover > a {
+    color: var(--gris);
+}
+
+.nav-ppal ul li ul {
+    display: none;
+}
+
+.nav-ppal ul li a:hover + ul,
+.nav-ppal ul li ul:hover {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .nav-ppal ul {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .nav-ppal ul ul a:hover {
+        background: #ffe1e150;
+    }
+    .nav-ppal ul li a:hover + ul,
+    .nav-ppal ul li ul:hover {
+        display: block;
+        position: absolute; /*Fijo sin ocupar espacio, ni mover*/
+    }
+}
+
+.navegacion__enlace {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: var(--rosita);
+}
+
+audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Sino no se centra */
+}
+
+aside {
+    position: sticky;
+    top: 0;
+    align-self: start; /*Lo necesito porque está dentro de grid, sino no hace falta*/
+}
+
+#scroll_index{ /* Altura máxima y scroll vertical*/
+    max-height: 60rem;
+    overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal { /*desde después del audio hasta antes del footer*/
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+        width: 90%;
+    }
+}
+
+.entrada {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+/** Boton **/
+.boton {
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+    background-color: var(--primario);
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+
+/** Cursos **/
+
+.cursos {
+    list-style: none;
+}
+
+.curso__informacion{ /* scroll */
+    max-height: 60rem;
+    overflow-y: auto; /* y = eje vertical */
+}
+
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.widget-curso__info {
+    font-weight: normal;
+}
+.widget-curso__label,
+.widget-curso__info {
+    font-size: 2rem;
+}
+
+.footer {
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    width: 100%;
+    margin: 4rem auto;
+}
+.footer .logo img {
+    width: 150px;
+}
+
+/** Cursos **/
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.curso:last-of-type {
+   border: none;
+}
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.curso__info {
+    font-weight: normal;
+}
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+
+/** Contacto **/
+
+.formulario {
+    background-color: var(--rosita);
+    margin-top: 1rem ;
+    width: 95%;
+    padding: 5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--gris);
+    max-width: 500px;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea {
+    height: 20rem;
+}
+
+iframe { /*Mapa BatJockeys*/
+    display: flex;
+    justify-content: center;
+}
+
+
